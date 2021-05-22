@@ -9,3 +9,10 @@ main {
   background: url(./assets/bg-intro-desktop.png) ;
   background-color: hsl(0, 100%, 74%);
 }
+
+.container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100vh;
+}
