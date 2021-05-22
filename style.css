@@ -24,22 +24,24 @@ main {
 .form {
   background-color: #FFF;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-top: 25px;
 }
 
 .text {
-  align-items: center;
-  padding: 50px;
-  width: 400px;
+  width: 500px;
+  padding: 0 50px;
+}
+
+.text h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
 }
 
 .dir span:first-child {
   background-color: hsl(248, 32%, 49%);
   padding: 15px 0;
   width: 100%;
-    /* justify-content: center; */
-    /* align-items: center; */
   text-align: center;
   border-radius: 10px;
 }
@@ -53,14 +55,13 @@ main {
 .form form {
   flex-direction: column;
   display: flex;
-
 }
 
 form input {
-  padding: 10px 15px;
+  padding: 15px;
   margin-bottom: 20px;
   border-radius: 5px;
-  border: 1px solid rgb(224, 224, 224);
+  border: 2px solid rgb(224, 224, 224);
   font-size: 13px;
   font-weight: bold;
 }
@@ -70,4 +71,23 @@ form input {
   color: #FFF;
   border: 0;
   box-shadow: 1px 1px 1px 1px hsl(154deg 37% 42%);
+  font-size: 18px;
+  font-family: 'Poppins';
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: hsl(154, 42%, 46%);
+}
+
+.dir span:not(:first-child) {
+  color: black;
+  font-size: 10px;
+  padding: 40px;
+}
+
+@media (max-width: 760px){
+  .container {
+    flex-direction: column;
+  }
 }
