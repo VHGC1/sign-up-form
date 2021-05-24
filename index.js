@@ -11,6 +11,7 @@ var input = document.getElementsByTagName("input");
 function formValidation(event){
   for(let i = 0; i < 4; i++){
     input[i].classList.remove("error")
+    input[i].classList.remove("input_text")
     formError[i].style.display = "none"
     
     if(!email.validity.valid) {
@@ -20,9 +21,13 @@ function formValidation(event){
     }
   
     if((input.type != "email" || input.type != "submit") && input[i].value == ""){
+      input[i].style.border = "2px solid var(--red)"
+      input[i].style.color = "var(--red)"
       formError[i].style.display = "block"
+      input[2].placeholder = 'email@example/com'
       input[i].classList.add("error")
       event.preventDefault()
+      input[i].classList.add("input_text")
     }
   }
 }
