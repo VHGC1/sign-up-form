@@ -27,16 +27,20 @@
         <span>
           Try it for free then $20/mo.thereafter
         </span>
-        <div class="form">
-          <form action="">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Last Name">
-            <input type="text" placeholder="Email Adress">
-            <input type="text" placeholder="Password">
-            <input class="button" type="button" value="CLAIM YOUR FREE TRIAL">
+        <div class="form_container" >
+          <form id="form" class="form" novalidate>
+            <input id="firstName" name="name" type="text"  placeholder="First Name" title="Input your First name"  required>
+            <div class="form_error"><em>First Name cannot be empty</em></div>
+            <input id="lastName" name="lastName" type="text" placeholder="Last Name" title="Input your Last name" required>
+            <div class="form_error"><em>Last Name cannot be empty</em></div>
+            <input id="email" name="email" type="email" placeholder="Email Address" title="Input your email" required>
+            <div class="form_error"><em>Looks like this is not an email</em></div>
+            <input id="password" name="password" type="password" placeholder="Password" title="Input any password" required>
+            <div class="form_error"><em>Password cannot be empty</em></div>
+            <input id="formSubmit" class="button" name="submit" type="submit" value="Claim your free trial">
           </form>
           <span>
-            By clicking the button, you are agreeing to our terms and services
+            By clicking the button, you are agreeing to our <strong>terms and services</strong>
           </span>
         </div>
       </div>

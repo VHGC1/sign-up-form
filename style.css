@@ -7,26 +7,23 @@
 
 main {
   height: 100vh;
-  background: url(./assets/bg-intro-desktop.png) ;
+  background: url(./assets/bg-intro-desktop.png) no-repeat;
   background-color: hsl(0, 100%, 74%);
 }
 
 .container {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  display: flex;
+  
   height: 100vh;
   padding: 0 165px;
+
   font-family: 'Poppins';
   color: #FFF;
 }
 
-.form {
-  background-color: #FFF;
-  padding: 30px;
-  border-radius: 10px;
-  margin-top: 25px;
-}
+/* LEFT SIDE */
 
 .text {
   width: 500px;
@@ -38,40 +35,61 @@ main {
   margin-bottom: 25px;
 }
 
-.dir span:first-child {
-  background-color: hsl(248, 32%, 49%);
-  padding: 15px 0;
-  width: 100%;
-  text-align: center;
-  border-radius: 10px;
-}
+/* RIGHT SIDE */
 
 .dir {
-  align-items: center;
   display: flex;
+  
   flex-direction: column;
+  align-items: center;
 }
 
-.form form {
-  flex-direction: column;
+.form_container {
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 25px;
+  
+  background-color: #FFF;
+}
+
+.form_container form {
   display: flex;
+  flex-direction: column;
 }
 
 form input {
   padding: 15px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+
   border-radius: 5px;
   border: 2px solid rgb(224, 224, 224);
+
   font-size: 13px;
   font-weight: bold;
+}
+
+.error {
+  background: url("assets/icon-error.svg") no-repeat;
+  background-size: cover;
+  background-position: 95% center;
+  background-size: 1.5rem 1.5rem;
+}
+
+.form_error {
+  text-align: end;
+  color: black;
+
+  font-size: 12px;
 }
 
 .button {
   background-color: hsl(154, 59%, 51%);
   color: #FFF;
+
   border: 0;
   box-shadow: 1px 1px 1px 1px hsl(154deg 37% 42%);
-  font-size: 18px;
+
+  font-size: 15px;
   font-family: 'Poppins';
   font-weight: 500;
 }
@@ -80,14 +98,31 @@ form input {
   background-color: hsl(154, 42%, 46%);
 }
 
+
+.dir span:first-child {
+  text-align: center;
+
+  padding: 15px 0;
+  width: 100%;
+  border-radius: 10px;
+
+  background-color: hsl(248, 32%, 49%);
+}
+
 .dir span:not(:first-child) {
-  color: black;
-  font-size: 10px;
   padding: 40px;
+  font-size: 10px;
+  
+  color: hsl(246, 25%, 77%);
+}
+
+.dir span strong{
+  color: hsl(0, 100%, 74%);
 }
 
 @media (max-width: 760px){
   .container {
     flex-direction: column;
+    padding: 0 50px;
   }
 }
