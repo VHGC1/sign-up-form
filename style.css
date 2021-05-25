@@ -14,19 +14,18 @@
   padding: 0;
 }
 
-main {
-  height: 100vh;
+body {
   background: url(./assets/bg-intro-desktop.png) no-repeat;
   background-color: var(--red);
+  background-size: cover;
 }
 
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   
   height: 100vh;
-  padding: 0 165px;
 
   font-family: 'Poppins';
   color: var(--white);
@@ -113,7 +112,7 @@ form input {
 }
 
 
-.dir span:first-child {
+.btn {
   text-align: center;
 
   padding: 15px 0;
@@ -130,13 +129,33 @@ form input {
   color: var(--gray-border);
 }
 
-.dir span strong{
+.form_footer strong {
   color: var(--red);
 }
 
 @media (max-width: 760px){
   .container {
     flex-direction: column;
-    padding: 0 50px;
+    padding: 100px 20px;
+  }
+
+  .text {
+    width: auto;
+    padding: 0;
+    margin: 0 0 50px 0;
+    
+    text-align: center;
+  }
+
+  .text h1 {
+    font-size: 30px;
+  }
+
+  .btn span {
+    padding: 10px;
+  }
+
+  .form_footer {
+    padding: 0 !important;
   }
 }
